@@ -4,6 +4,8 @@ class MyTheme{
   static Color blackColor = Color(0xff242424) ;
   static Color primarylight = Color(0xffB7935F);
   static Color whiteColor = Colors.white;
+  static Color lightBeige = Color(0xffAD9B81);
+
 
   static ThemeData lightTheme = ThemeData(
     primaryColor: primarylight,
