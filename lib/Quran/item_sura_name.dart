@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:islami_rana/Home/myTheme.dart';
 import 'package:islami_rana/Quran/SuraDetailsScreen.dart';
+import 'package:islami_rana/provider/app_config_provider.dart';
+import 'package:provider/provider.dart';
 
 class itemSuraName extends StatelessWidget {
   String name;
@@ -7,6 +10,7 @@ class itemSuraName extends StatelessWidget {
   itemSuraName({required this.name,required this.index});
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<AppConfigProvider>(context);
     return InkWell(
       onTap: () {
         Navigator.of(context).pushNamed(SuraDetailsScreen.routeName,
@@ -15,7 +19,12 @@ class itemSuraName extends StatelessWidget {
       child: Text(
           name,
           textAlign: TextAlign.center,
-          style: Theme.of(context).textTheme.titleSmall),
+          style: provider.isDarkMode()?
+          Theme.of(context).textTheme.titleSmall!.copyWith(
+            color: MyTheme.whiteColor
+          )
+        :
+          Theme.of(context).textTheme.titleSmall),
     );
   }
 }
