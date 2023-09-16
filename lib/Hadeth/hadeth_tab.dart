@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'item_hadeth_name.dart';
 
 class HadethTab extends StatefulWidget {
@@ -25,7 +25,7 @@ class _HadethTabState extends State<HadethTab> {
             color: Theme.of(context).primaryColor,
             thickness: 3,
           ),
-          Text('Hadeth Name',
+          Text(AppLocalizations.of(context)!.hadeth_name,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.titleMedium),
           Divider(
