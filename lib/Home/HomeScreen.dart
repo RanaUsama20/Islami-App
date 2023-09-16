@@ -4,6 +4,7 @@ import 'package:islami_rana/Quran/quran_tab.dart';
 import 'package:islami_rana/Radio/radio_tab.dart';
 import 'package:islami_rana/Sebha/sebha_tab.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islami_rana/Settings/settings_tab.dart';
 
 class HomeScreen extends StatefulWidget {
  static const String routeName = 'Home Screen';
@@ -15,7 +16,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
  int selectedIndex = 0;
  List<Widget> tabs = [
-   QuranTab(),HadethTab(),SebhaTab(),RadioTab()
+   QuranTab(),HadethTab(),SebhaTab(),RadioTab(),SettingsTab()
  ];
   @override
   Widget build(BuildContext context) {
@@ -55,6 +56,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   BottomNavigationBarItem(
                       label: AppLocalizations.of(context)!.radio ,
                       icon: ImageIcon(AssetImage('assets/images/radio_icon.png'))),
+                  BottomNavigationBarItem(
+                      label: AppLocalizations.of(context)!.settings ,
+                      icon: Icon(Icons.settings)),
+
                 ]),
           ),
           body: tabs[selectedIndex],

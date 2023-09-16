@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:islami_rana/Home/myTheme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class SebhaTab extends StatefulWidget {
 
@@ -40,7 +42,7 @@ class _SebhaTabState extends State<SebhaTab> {
                 ),
                 SizedBox(
                     height: 30),
-                Text('number of tasbehs',
+                Text(AppLocalizations.of(context)!.number_of_tasbehs,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.titleMedium),
                 SizedBox(
