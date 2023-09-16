@@ -5,5 +5,15 @@
 "sebha" : "سبحة",
 "radio" : "راديو",
 "sura_name" : "اسم السورة",
-"hadeth_name" : "اسم الحديث"
+"hadeth_name" : "اسم الحديث",
+"settings" : "الاعدادات",
+"language" : "اللغة",
+"english" : "انجليزي",
+"arabic" : "عربي",
+"theme" : "النمط",
+"light" : "مضئ",
+"dark" : "ليلي",
+"number_of_tasbehs" : "عدد التسبيحات",
+"holy_quran_podcast" : "اذاعة القران الكريم"
+
 }
