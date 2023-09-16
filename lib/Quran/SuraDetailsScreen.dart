@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_rana/Quran/itemSuraDetails.dart';
 import 'package:islami_rana/Home/myTheme.dart';
+import 'package:provider/provider.dart';
+
+import '../provider/app_config_provider.dart';
 
 class SuraDetailsScreen extends StatefulWidget {
   static const String routeName = 'Sura Details';
@@ -16,15 +19,23 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     var args = ModalRoute.of(context)?.settings.arguments as SuraNamesArgs;
+    var provider = Provider.of<AppConfigProvider>(context);
+
     if(verses.isEmpty) {
       loadFiles(args.index);
     }
     return Stack(
       children: [
-      Image.asset('assets/images/default_background.png',
-      width: double.infinity,
-      height: double.infinity,
-      fit: BoxFit.fill,),
+        provider.isDarkMode()?
+        Image.asset('assets/images/background_dark.png',
+          width: double.infinity,
+          height: double.infinity,
+          fit: BoxFit.fill,)
+            :
+        Image.asset('assets/images/default_background.png',
+          width: double.infinity,
+          height: double.infinity,
+          fit: BoxFit.fill,),
     Scaffold(
     appBar: AppBar(
     title: Text('${args.name}',

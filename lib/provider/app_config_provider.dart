@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppConfigProvider extends ChangeNotifier{
   String appLanguage = 'ar';
+  ThemeMode appTheme = ThemeMode.light;
 
   void ChangeLanguage(String newLanguage){
       if(appLanguage == newLanguage){
@@ -12,4 +13,18 @@ class AppConfigProvider extends ChangeNotifier{
         notifyListeners();
       }
   }
+  void ChangeTheme(ThemeMode newMode){
+    if(appTheme == newMode){
+      return;
+    }
+    else{
+      appTheme = newMode;
+      notifyListeners();
+    }
+  }
+  bool isDarkMode(){
+    return appTheme == ThemeMode.dark;
+  }
+
+
 }

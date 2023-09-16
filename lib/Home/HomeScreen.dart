@@ -5,6 +5,8 @@ import 'package:islami_rana/Radio/radio_tab.dart';
 import 'package:islami_rana/Sebha/sebha_tab.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_rana/Settings/settings_tab.dart';
+import 'package:islami_rana/provider/app_config_provider.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
  static const String routeName = 'Home Screen';
@@ -20,8 +22,15 @@ class _HomeScreenState extends State<HomeScreen> {
  ];
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<AppConfigProvider>(context);
     return Stack(
       children: [
+        provider.isDarkMode()?
+        Image.asset('assets/images/background_dark.png',
+          width: double.infinity,
+          height: double.infinity,
+          fit: BoxFit.fill,)
+        :
         Image.asset('assets/images/default_background.png',
         width: double.infinity,
          height: double.infinity,
