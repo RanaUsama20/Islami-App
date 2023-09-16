@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:islami_rana/myTheme.dart';
+import 'package:islami_rana/Home/myTheme.dart';
 
 class SebhaTab extends StatefulWidget {
 
@@ -45,7 +45,8 @@ class _SebhaTabState extends State<SebhaTab> {
               style: Theme.of(context).textTheme.titleMedium),
                 SizedBox(
               height: 30),
-          ElevatedButton(onPressed: (){},
+          ElevatedButton(
+              onPressed: (){},
                     child: Text(num),
                     style: ElevatedButton.styleFrom(
                       foregroundColor: MyTheme.blackColor ,
@@ -61,7 +62,8 @@ class _SebhaTabState extends State<SebhaTab> {
                      ),
                 SizedBox(
                     height: 30),
-          ElevatedButton(onPressed: (){
+          ElevatedButton(
+              onPressed: (){
           },
               child: Text(subject),
               style: ElevatedButton.styleFrom(
