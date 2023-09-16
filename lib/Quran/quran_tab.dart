@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islami_rana/item_sura_name.dart';
+import 'package:islami_rana/Quran/item_sura_name.dart';
 
 class QuranTab extends StatelessWidget {
   List<String> names = [
@@ -151,6 +151,7 @@ class QuranTab extends StatelessWidget {
               itemCount: names.length,
             ),
           )
+
         ],
       ),
     );
