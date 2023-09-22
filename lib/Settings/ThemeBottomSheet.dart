@@ -3,6 +3,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_rana/provider/app_config_provider.dart';
 import 'package:provider/provider.dart';
 
+import '../Home/myTheme.dart';
+
 
 class ThemeBottomSheet extends StatefulWidget {
 
@@ -21,7 +23,7 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
         children: [
           InkWell(
               onTap: (){
-                provider.ChangeTheme(ThemeMode.light) ;
+                provider.ChangeTheme('light') ;
 
               },
               child: provider.isDarkMode()?
@@ -31,7 +33,7 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
           ),
           InkWell(
               onTap: () {
-                provider.ChangeTheme(ThemeMode.dark) ;
+                provider.ChangeTheme('dark') ;
               },
               child: provider.isDarkMode()?
               getSelectedItemWidget(AppLocalizations.of(context)!.dark)
@@ -53,9 +55,9 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
         children: [
           Text(text,
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                  color: Theme.of(context).primaryColor
+                  color: MyTheme.yellowColor
               )),
-          Icon(Icons.check,color: Theme.of(context).primaryColor,)
+          Icon(Icons.check,color: MyTheme.yellowColor,)
         ],
       ),
     );
