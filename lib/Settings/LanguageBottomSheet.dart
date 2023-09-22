@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islami_rana/Home/myTheme.dart';
 import 'package:islami_rana/provider/app_config_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -53,9 +54,9 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
         children: [
           Text(text,
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                  color: Theme.of(context).primaryColor
+                  color: MyTheme.yellowColor
               )),
-          Icon(Icons.check,color: Theme.of(context).primaryColor,)
+          Icon(Icons.check,color: MyTheme.yellowColor,)
         ],
       ),
     );
